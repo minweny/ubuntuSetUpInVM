@@ -85,3 +85,5 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
+## VMware Nat port forwarding   
+Remember to open port on your firewall, especially Win10
