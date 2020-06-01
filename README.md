@@ -30,6 +30,8 @@ $ sudo systemctl status ssh
 ## Network:    
 Use Nat for internet - ens33    
 Nat can port forwarding, Host-Only cannot   
+
+I should note that in general you should also specify renderer: NetworkManager or networkd. In Ubuntu Server 18.04, in the default configuration the renderer is not specified (most probably, because networkd is the default option). However, if you use desktop Ubuntu version you have to add the settingrenderer: NetworkManager to your configuration on the same level where you define version and ethernets.          
 ```
 example: 
 
