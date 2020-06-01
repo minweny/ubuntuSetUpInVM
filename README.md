@@ -61,6 +61,23 @@ network:
       nameservers:
         addresses: [8.8.8.8,8.8.4.4]
 
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses: [192.168.206.21/24]
+      gateway4: 192.168.206.2
+      nameservers:
+        addresses: [8.8.8.8,8.8.4.4]
+    ens38:
+      dhcp4: no
+      addresses: [192.168.240.21/24]
+      #gateway4: 192.168.206.2
+      nameservers:
+        addresses: [8.8.8.8,8.8.4.4]
+
 sudo netplan apply
 
 gateway starts with 2!
@@ -83,6 +100,7 @@ power -> power saving -> blank screen
 ```
 sudo apt update
 sudo apt upgrade -y
+sudo apt install net-tools
 ```
 
 ## VMware Nat port forwarding   
@@ -101,4 +119,15 @@ netstat -ab
 sudo nmap 192.168.0.1
 ```
  
+## double nic configuration(not useful)     
+```
+ip a
 
+route -4
+check if there is two gateway
+
+if yes
+sudo route del -net 192.168.240.0 gw 0.0.0.0 netmask 255.255.255.0
+
+
+```
