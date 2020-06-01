@@ -86,4 +86,19 @@ sudo apt upgrade -y
 ```
 
 ## VMware Nat port forwarding   
-Remember to open port on your firewall, especially Win10
+[https://windowsreport.com/open-firewall-ports/]    
+Remember to open port on your firewall, especially Win10    
+
+## Port Scanning    
+[https://danielmiessler.com/study/tcpdump/]    
+[https://phoenixnap.com/kb/nmap-scan-open-ports]    
+
+```
+tcpdump port 3389
+
+netstat -ab
+
+sudo nmap 192.168.0.1
+```
+ 
+
